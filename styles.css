@@ -1,0 +1,225 @@
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+}
+
+header {
+  background-color: #e5cfa1;
+  color: #fff;
+  padding: 8px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #5f84d3;
+}
+
+nav ul li a:hover {
+  color: #c9e6ff;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  position: relative;
+  background: url("https://www.perrygolf.com/blog/wp-content/uploads/2019/01/Mid-Ocean-Club-1.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better visibility */
+}
+
+.about-section,
+.experience-section {
+  height: 80vh; /* Adjust the height as needed */
+  overflow-y: scroll; /* Add scroll for overflow content */
+  text-align: center;
+  background-color: #e6e6e6;
+}
+
+.experience-section {
+  height: 30vh; /* Adjust the height as needed */
+}
+
+/* Apply the fade-in effect to the text content in the experience section */
+.experience-section.fade-in-text {
+  height: 30vh; /* Adjust the height for the faded-in experience section */
+}
+
+.about-text {
+  color: #5f84d3; /* Set the text color for the about section */
+  max-width: 700px; /* Set a maximum width for the text container */
+  margin: 0 auto; /* Center the text container */
+  padding: 0 20px; /* Add padding to the text container as needed */
+  text-align: center; /* Align the text to the left */
+  font-size: 20px;
+}
+
+/* Apply the fade-in effect to the text content in the about section */
+.about-text.fade-in-text {
+  color: #5f84d3; /* Set the text color for the faded-in text in the about section */
+}
+
+.experience-content {
+  padding: 10px;
+  max-width: 500px; /* Adjust the maximum width as needed */
+  margin: auto;
+  font-size: 20px;
+}
+
+.landing-section,
+.experience-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.landing-text,
+.experience-content {
+  flex: 1;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.landing-image,
+.experience-image {
+  flex: 1;
+  text-align: center;
+}
+
+.landing-image img,
+.experience-image img {
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  display: block; /* Ensure the image is displayed as a block */
+  margin: 0 auto; /* Center the image within its container */
+}
+
+/* Add a fade-in effect to the text content */
+.fade-in-text {
+  opacity: 0;
+  animation: fadeInTextAnimation 2s forwards;
+}
+
+.experience-image {
+  flex: 1;
+  text-align: center;
+  max-width: 450px; /* Adjust the maximum width as needed */
+  margin: auto;
+}
+
+.experience-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px; /* Adjust the maximum height as needed */
+}
+
+@keyframes fadeInTextAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e5cfa1;
+  z-index: 1;
+  opacity: 0; /* Initial opacity set to 0 for the hero content */
+  animation: fadeInTextAnimation 2s forwards; /* Apply the fade-in animation */
+  font-size: 70rem;
+}
+
+.hero-content h2 {
+  font-size: 7rem; /* Adjust the font size as needed */
+}
+
+/* Apply the fade-in effect to the text content in the hero section */
+@keyframes fadeInTextAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  background-color: #e5cfa1;
+  color: #5f84d3;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: auto;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .about-section,
+  .experience-section {
+    padding: 30px 20px;
+  }
+
+  /* Additional styles for the experiences page at smaller screen sizes */
+  .experience-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .experience-content,
+  .experience-image {
+    width: 260px; /* Smaller logo width for smaller screens */
+    top: 50px; /* Adjust vertical position on mobile */
+    right: 40px; /* Adjust horizontal position on mobile */
+    transform: none;
+    position: static;
+  }
+}
