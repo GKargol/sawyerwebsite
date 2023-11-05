@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="lightbox.min.css" />
+    <title>Your Gallery</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="experiences.html">Experience</a></li>
+          <li><a href="mailto:contact@sawyermaclean.com">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="media-gallery">
+      <h2>Media</h2>
+      <p>
+        Welcome to the gallery! Feel free to click (or tap) on a video/image to
+        view it in full view!
+      </p>
+      <div class="gallery">
+        <div class="gallery-item">
+          <a href="/files/IMG_6807.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_5857.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_5911.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_5950.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_5958.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_5959.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_5960.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_5961.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_5966.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_6266.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_6297 2.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_6297.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_6405.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_6705.mov" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="/files/IMG_6809.MOV" data-video>
+            <div class="media">
+              <img src="/files/golfthingyes.png" alt="Video Thumbnail" />
+              <div class="video-indicator">Video</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item">
+          <a href="/files/golfthingyes.png" data-image>
+            <div class="media">
+              <img
+                class="media-image"
+                src="/files/golfthingyes.png"
+                alt="Image"
+              />
+              <div class="image-indicator">Image</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Grayson Kargol | Contact: contact@sawyermaclean.com</p>
+    </footer>
+
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+    <script src="lightbox.min.js"></script>
+    <script>
+      var gallery = document.querySelector(".gallery");
+      var lightbox = new SimpleLightbox(".gallery a");
+
+      gallery.addEventListener("click", function (event) {
+        if (event.target.tagName === "IMG") {
+          lightbox.open({ source: event.target.src });
+        }
+      });
+
+      var videos = document.querySelectorAll("[data-video]");
+
+      videos.forEach(function (video) {
+        video.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevents the default behavior of clicking on the video
+          var videoSrc = this.getAttribute("href");
+          console.log("Clicked on video but not playing: ", videoSrc);
+        });
+      });
+    </script>
+  </body>
+</html>
